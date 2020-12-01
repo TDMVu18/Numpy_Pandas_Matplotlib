@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 A = {'2020': 10, '2017': 20, '2007': 50, '2015': 30, '2010': 40} 
 Counts = sorted(A.values(), reverse=True)
-Foods = sorted(Food_counts, key=A.__getitem__, reverse=True) 
+Foods = sorted(A, key=A.__getitem__, reverse=True) 
 ind_Foods= range(len(A))
 plt.bar(ind_Foods, Counts, align='center')
 plt.xticks(ind_Foods, Foods)
